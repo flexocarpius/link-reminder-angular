@@ -1,0 +1,27 @@
+<div class="page-container">
+  <mat-toolbar>
+    <span><mat-icon>link</mat-icon></span>
+  </mat-toolbar>
+  <div class="container">
+    <div class="login-container">
+      <form class="example-form">
+        <h2>Save your links. Never forget one.</h2>
+        <p class="error" *ngIf="error.length > 0">{{ error }}</p>
+        <mat-form-field class="full-width">
+          <mat-label>Email</mat-label>
+          <input #email matInput placeholder="Email" (keyup.enter)="emailUpdate(email.value)" (blur)="emailUpdate(email.value)">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>Password</mat-label>
+          <input #password matInput placeholder="Password" type="password" (keyup.enter)="passwordUpdate(password.value)" (blur)="passwordUpdate(password.value)">
+        </mat-form-field>
+      </form>
+      <div class="buttons">
+        <button mat-raised-button (click)="onRegisterClick($event)" color="accent">Register</button>
+        <div class="spacer"></div>
+        <button mat-button (click)="onLoginClick($event)">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,20 @@
+<div class="card" (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave($event)">
+    <div class="container">
+        <h3 class="link" (click)="onClicked($event)">{{ link.link }}</h3>
+        <mat-chip-list aria-label="Fish selection">
+            <ng-container *ngFor="let tag of link.tags">
+                <mat-chip>{{ tag }}</mat-chip>
+            </ng-container>
+        </mat-chip-list>
+        <p>{{ link.date | timeago }}</p>
+    </div>
+    <div class="spacer"></div>
+    <div class="button-container" [ngClass]="{'button-visible': isHovered}">
+        <button mat-icon-button aria-label="Edit link" (click)="onEdit($event)">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button aria-label="Remove link" (click)="onRemove($event)">
+            <mat-icon class="delete-button">delete</mat-icon>
+        </button>
+    </div>
+</div>

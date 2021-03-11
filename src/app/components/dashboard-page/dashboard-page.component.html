@@ -1,0 +1,19 @@
+<div class="main">
+    <mat-toolbar color="secondary" class="toolbar">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Link Reminder</span>
+        <span class="spacer"></span>
+        <button mat-icon-button class="example-icon" aria-label="Share">
+          <mat-icon>share</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Logout" (click)="onLogoutButtonClick($event)">
+          <mat-icon>logout</mat-icon>
+        </button>
+      </mat-toolbar>
+    <div class="container">
+        <app-recents-page class="recents"></app-recents-page>
+        <app-links-page class="links"></app-links-page>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="page-container">
+    <mat-toolbar>
+      <span><mat-icon>link</mat-icon></span>
+    </mat-toolbar>
+    <div class="container">
+      <div class="login-container">
+        <form class="example-form" [formGroup]="signUpForm">
+          <h2>Create your account.</h2>
+          <mat-form-field class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email">
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" type="password" formControlName="password">
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-label>Confirm password</mat-label>
+            <input matInput placeholder="Password" type="password" formControlName="passwordConfirmation">
+            <mat-error *ngIf="signUpForm.controls.passwordConfirmation.errors?.confirmed">Passwords don't match</mat-error>
+          </mat-form-field>
+        </form>
+        <div class="buttons">
+          <button mat-icon-button (click)="onBackClick($event)">
+            <mat-icon>arrow_back</mat-icon>
+          </button>
+          <div class="spacer"></div>
+          <button mat-raised-button color="primary" (click)="onRegisterClick($event)">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

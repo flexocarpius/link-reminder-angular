@@ -1,0 +1,42 @@
+.card {
+  margin: 12px;
+  display: flex;
+  border-bottom: 0.0235em solid rgb(209, 209, 209);
+  height: 116px;
+  justify-content: center;
+}
+
+.link {
+  font-weight: 500;
+  cursor: pointer;
+  transition: ease-in color 0.2s;
+  margin: 0px;
+}
+
+.link:hover {
+  color: #673ab7;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+
+.button-container {
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.button-visible {
+  display: flex;
+}
+
+.delete-button {
+  color: red;
+}

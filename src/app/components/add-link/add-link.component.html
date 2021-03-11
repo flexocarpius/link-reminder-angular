@@ -1,0 +1,8 @@
+<mat-card class="full-width container">
+  <mat-form-field class="text" floatLabel="never">
+    <input #linkInput matInput placeholder="Add link...." (keyup.enter)="linkUpdate(linkInput.value)" (blur)="linkUpdate(linkInput.value)">
+  </mat-form-field>
+  <button mat-button (click)="onLinkAdd($event)">
+    <mat-icon>send</mat-icon>
+  </button>
+</mat-card>

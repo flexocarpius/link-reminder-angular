@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Edit link</h2>
+<mat-dialog-content class="container">
+    <mat-form-field appearance="standard">
+        <mat-label>Link</mat-label>
+        <input matInput placeholder="Link's URL" [formControl]="linkUrl">
+    </mat-form-field>
+    <mat-form-field class="example-chip-list">
+        <mat-chip-list #chipList aria-label="Tags">
+            <mat-chip *ngFor="let tag of tags"
+                    [selectable]="false"
+                    [removable]="true"
+                    (removed)="remove(tag)">
+                {{tag}}
+                <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+          <input placeholder="Add a tag..."
+                [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                [matChipInputAddOnBlur]="true"
+                (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button (click)="onSave($event)" cdkFocusInitial>Save</button>
+</mat-dialog-actions>

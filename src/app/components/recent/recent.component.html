@@ -1,0 +1,13 @@
+<div class="container" *ngIf="links.length > 0">
+    <cdk-virtual-scroll-viewport itemSize="116" class="viewport">
+        <div *cdkVirtualFor="let link of links" class="link-item">
+            <app-link [link]="link"></app-link>
+        </div>
+    </cdk-virtual-scroll-viewport>
+</div>
+<div class="message-container" *ngIf="links.length === 0">
+    <div class="message-inner-container">
+        <mat-icon class="message-icon" [inline]="true" color="primary">link</mat-icon>
+        <h1>New links will appear here.</h1>
+    </div>
+</div>

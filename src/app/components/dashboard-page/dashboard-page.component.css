@@ -1,0 +1,27 @@
+.main {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+}
+
+.container {
+  display: flex;
+  flex-flow: row;
+  height: 100%;
+  flex: 1;
+}
+
+.recents {
+  flex: 1;
+}
+
+.links {
+  flex: 1;
+}
